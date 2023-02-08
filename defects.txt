@@ -1,0 +1,27 @@
+    def to_list(self, string: str, delimeter = ",") -> list[str]:
+        """
+        Принимает на вход текст с разделителем и возвращает список строк. \n
+        Параметры: \n 
+            `string` - строка для обработки \n
+            `delimeter` - разделитель строк. По умолчанию запятая (",") \n
+        Пример 1: `to_list("a,b,c,d") -> ["a", "b", "c", "d"]`
+        Пример 2: `to_list("1:2:3", ":") -> ["1", "2", "3"]`
+        """
+        if(self.is_empty(string)):
+            return []
+        
+        return string.split(delimeter)
+
+Негативный прова
+         def delete_symbol(self, string: str, symbol: str) -> str:
+        """
+        Удаляет все подстроки из переданной строки \n 
+        Параметры: \n 
+            `string` - строка для обработки \n
+            `symbol` - искомый символ для удаления \n
+        Пример 1: `delete_symbol("SkyPro", "k") -> "SyPro"`
+        Пример 2: `delete_symbol("SkyPro", "Pro") -> "Sky"`
+        """
+        if(self.contains(string, symbol)):
+            string = string.replace(symbol, "")    
+        return string
